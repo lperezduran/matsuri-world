@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matsuri World</title>
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+<header class="header">
+<nav class="navbar" aria-label="Menú principal">
+
+<div class="logo">🎎 Matsuri World</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html" aria-current="page">Inicio</a></li>
+<li><a href="gion.html">Gion Matsuri</a></li>
+<li><a href="nebuta.html">Nebuta Matsuri</a></li>
+
+<li class="dropdown">
+<a href="#cultura">Cultura ▾</a>
+
+<ul class="dropdown-menu">
+<li><a href="gion.html">Gion Matsuri</a></li>
+<li><a href="nebuta.html">Nebuta Matsuri</a></li>
+</ul>
+</li>
+
+</ul>
+
+<div class="language" role="group" aria-label="Selector de idioma">
+<button aria-pressed="false">EN</button>
+<button class="active" aria-pressed="true">ES</button>
+</div>
+
+</nav>
+</header>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="slider">
+<img src="images/images-hero.jpg" class="slide active" alt="Torii japonés al atardecer">
+<img src="images/images-gion.jpg" class="slide" alt="Carrozas del Gion Matsuri en Kioto">
+<img src="images/images-nebuta.jpg" class="slide" alt="Figuras iluminadas del Nebuta Matsuri en Aomori">
+</div>
+
+<!-- CONTROLES SLIDER -->
+<button class="slider-btn prev" aria-label="Imagen anterior">❮</button>
+<button class="slider-btn next" aria-label="Siguiente imagen">❯</button>
+
+<!-- INDICADORES -->
+<div class="slider-dots" role="tablist" aria-label="Control del slider">
+<button class="dot active" aria-label="Imagen 1"></button>
+<button class="dot" aria-label="Imagen 2"></button>
+<button class="dot" aria-label="Imagen 3"></button>
+</div>
+
+<div class="hero-content">
+
+<h1>Matsuri World</h1>
+
+<p id="welcome-message"></p>
+
+<h2>Experiencia de Festivales Japoneses</h2>
+
+<p>
+Explora la rica herencia cultural de los festivales tradicionales japoneses
+</p>
+
+<a href="#festivales" class="btn-explore">Explorar Festivales</a>
+
+</div>
+
+</section>
+
+<!-- FESTIVALES -->
+<section class="festivals" id="festivales">
+
+<h2 class="section-title">Festivales Destacados</h2>
+
+<div class="festival-container">
+
+<article class="festival-card">
+<img src="images/images-gion.jpg" alt="Desfile del festival Gion Matsuri con carrozas tradicionales en Kioto">
+<h3>Gion Matsuri</h3>
+<p>Festival tradicional celebrado en Kioto durante julio.</p>
+<a href="gion.html">Leer más</a>
+</article>
+
+<article class="festival-card">
+<img src="images/images-nebuta.jpg" alt="Figuras iluminadas del festival Nebuta Matsuri en Aomori durante la noche">
+<h3>Nebuta Matsuri</h3>
+<p>Festival con figuras iluminadas en Aomori.</p>
+<a href="nebuta.html">Leer más</a>
+</article>
+
+<article class="festival-card">
+<img src="images/images-tenjin.jpg" alt="Barcos decorados del festival Tenjin Matsuri navegando en el río">
+<h3>Tenjin Matsuri</h3>
+<p>Festival con procesiones y desfiles de barcos.</p>
+<a href="#">Leer más</a>
+</article>
+
+</div>
+
+</section>
+
+<!-- CULTURA -->
+<section class="culture" id="cultura">
+<h2>Cultura Japonesa</h2>
+<p>Los festivales japoneses representan tradición, historia y celebraciones culturales únicas.</p>
+</section>
+
+<!-- FORMULARIO -->
+<section class="contact">
+
+<form id="contact-form" aria-labelledby="contact-title">
+
+<h2 id="contact-title">Contáctanos</h2>
+
+<label for="name">Nombre:</label>
+<input type="text" id="name" required>
+
+<label for="email">Correo:</label>
+<input type="email" id="email" required>
+
+<label for="message">Mensaje:</label>
+<textarea id="message" required></textarea>
+
+<button type="submit">Enviar</button>
+
+<p id="form-message" aria-live="polite"></p>
+
+</form>
+
+</section>
+
+</main>
+
+<footer class="footer">
+<p>© 2026 Matsuri World - Proyecto académico</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

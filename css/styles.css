@@ -1,0 +1,579 @@
+/* =========================
+RESET GENERAL
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+line-height:1.6;
+color:#222;
+background:white;
+}
+
+/* =========================
+HERO (CORREGIDO)
+========================= */
+
+.hero{
+margin-top:80px;
+position:relative;
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+overflow:hidden; /* 🔥 CLAVE */
+}
+
+/* SLIDER CONTENEDOR */
+.slider{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+}
+
+/* IMÁGENES */
+.slide{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transition:opacity 1s ease-in-out;
+}
+
+/* IMAGEN ACTIVA */
+.slide.active{
+opacity:1;
+}
+
+/* CONTENIDO ENCIMA */
+.hero-content{
+position:relative;
+z-index:1;
+color:white;
+max-width:800px;
+margin:auto;
+padding:20px;
+}
+
+/* OSCURECER IMAGEN PARA LEGIBILIDAD */
+.slider::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+z-index:1;
+}
+
+/* TEXTO SIEMPRE ENCIMA */
+
+.hero-content{
+position:relative;
+z-index:2;
+color:white;
+max-width:800px;
+padding:20px;
+}
+
+/* =========================
+SKIP LINK (ACCESIBILIDAD)
+========================= */
+
+.skip-link{
+position:absolute;
+top:-40px;
+left:10px;
+background:black;
+color:white;
+padding:8px;
+z-index:1000;
+}
+
+.skip-link:focus{
+top:10px;
+}
+
+/* =========================
+HEADER Y NAVBAR
+========================= */
+
+.header{
+position:fixed;
+width:100%;
+top:0;
+background:white;
+z-index:1000;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px 20px;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}
+
+/* MENÚ */
+
+.nav-links{
+display:flex;
+gap:40px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#222;
+font-weight:500;
+}
+
+.nav-links a:hover{
+color:#c40000;
+}
+
+/* IDIOMA */
+
+.language{
+display:flex;
+gap:5px;
+}
+
+.language button{
+border:none;
+padding:6px 12px;
+border-radius:20px;
+cursor:pointer;
+background:#eee;
+}
+
+.language .active{
+background:red;
+color:white;
+}
+
+/* =========================
+FOCUS (ACCESIBILIDAD)
+========================= */
+
+a:focus,
+button:focus{
+outline:3px solid red;
+outline-offset:3px;
+}
+
+
+
+/* BOTÓN */
+
+.btn-explore{
+display:inline-block;
+background:red;
+color:white;
+padding:15px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn-explore:hover{
+background:#c40000;
+}
+
+/* =========================
+FESTIVALES
+========================= */
+
+.festivals{
+padding:80px 20px;
+background:#f5f5f5;
+text-align:center;
+}
+
+.section-title{
+font-size:36px;
+margin-bottom:40px;
+}
+
+.festival-container{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.festival-card{
+background:white;
+width:300px;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:left;
+}
+
+.festival-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.festival-card h3{
+padding:15px;
+font-size:20px;
+}
+
+.festival-card p{
+padding:0 15px 15px 15px;
+font-size:15px;
+color:#333;
+}
+
+.festival-card a{
+display:block;
+padding:15px;
+text-decoration:none;
+color:red;
+font-weight:bold;
+}
+
+.festival-card a:hover{
+text-decoration:underline;
+}
+
+/* =========================
+CULTURA
+========================= */
+
+.culture{
+padding:60px 20px;
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+/* =========================
+SUBPÁGINAS
+========================= */
+
+.subpage{
+margin-top:100px;
+padding:40px;
+text-align:center;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.subpage img{
+max-width:800px;
+width:100%;
+display:block;
+margin:20px auto;
+border-radius:10px;
+}
+
+.subpage p{
+font-size:18px;
+color:#555;
+line-height:1.6;
+margin-top:10px;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* =========================
+RESPONSIVE TABLET
+========================= */
+
+@media (max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:10px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.hero{
+height:80vh;
+}
+
+.hero-content h1{
+font-size:32px;
+}
+
+.hero-content h2{
+font-size:20px;
+}
+
+.hero-content p{
+font-size:16px;
+}
+
+.festival-container{
+flex-direction:column;
+align-items:center;
+}
+
+.festival-card{
+width:90%;
+}
+
+}
+
+/* =========================
+RESPONSIVE MÓVIL
+========================= */
+
+@media (max-width:480px){
+
+.logo{
+font-size:16px;
+}
+
+.hero{
+height:70vh;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:26px;
+}
+
+.hero-content h2{
+font-size:18px;
+}
+
+.hero-content p{
+font-size:14px;
+}
+
+.btn-explore{
+padding:10px 20px;
+font-size:14px;
+}
+
+.subpage{
+padding:20px;
+}
+
+}
+
+/* =========================
+FORMULARIO CONTACTO
+========================= */
+
+.contact{
+padding:80px 20px;
+background:#ffffff;
+max-width:800px;
+margin:auto;
+text-align:left;
+}
+
+.contact h2{
+text-align:center;
+margin-bottom:30px;
+font-size:28px;
+}
+
+#contact-form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+#contact-form label{
+font-weight:bold;
+}
+
+#contact-form input,
+#contact-form textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:16px;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus{
+border-color:red;
+outline:none;
+}
+
+#contact-form button{
+background:red;
+color:white;
+border:none;
+padding:12px;
+border-radius:25px;
+cursor:pointer;
+font-weight:bold;
+}
+
+#contact-form button:hover{
+background:#c40000;
+}
+
+#form-message{
+margin-top:10px;
+font-weight:bold;
+}
+
+/* =========================
+DROPDOWN
+========================= */
+
+.dropdown{
+position:relative;
+}
+
+.dropdown-menu{
+position:absolute;
+top:100%;
+left:0;
+background:white;
+list-style:none;
+display:none;
+min-width:180px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu li{
+padding:10px;
+}
+
+.dropdown:hover .dropdown-menu{
+display:block;
+}
+
+/* =========================
+SLIDER
+========================= */
+
+.slider{
+position:absolute;
+width:100%;
+height:100%;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transition:opacity 1s ease;
+}
+
+.slide.active{
+opacity:1;
+}
+
+/* =========================
+ACCESIBILIDAD PRO
+========================= */
+
+a:focus,
+button:focus{
+outline:3px solid black;
+outline-offset:3px;
+}
+
+@media (prefers-reduced-motion: reduce){
+.slide{
+transition:none;
+}
+}
+
+/* =========================
+CONTROLES SLIDER PRO
+========================= */
+
+.slider-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+font-size:30px;
+padding:10px 15px;
+cursor:pointer;
+z-index:2;
+border-radius:50%;
+}
+
+.slider-btn:hover{
+background:rgba(0,0,0,0.8);
+}
+
+.prev{ left:20px; }
+.next{ right:20px; }
+
+/* DOTS */
+
+.slider-dots{
+position:absolute;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:10px;
+z-index:2;
+}
+
+.dot{
+width:12px;
+height:12px;
+border-radius:50%;
+border:none;
+background:#ccc;
+cursor:pointer;
+}
+
+.dot.active{
+background:red;
+}
+
+/* ACCESIBILIDAD */
+.dot:focus,
+.slider-btn:focus{
+outline:3px solid white;
+outline-offset:3px;
+}
